@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Republicana - Revolta da Chibata - 1910</title>
+  
+  <!-- Fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=GFS+Didot&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* RESET E BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: #ebe5d5;
+      color: #1f160d;
+      line-height: 1.6;
+    }
+    
+    /* CONTAINER PRINCIPAL */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* CABEÇALHO */
+    header {
+      text-align: center;
+      border-bottom: 2px solid #2c2416;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+    
+    h1 {
+      font-family: 'Bodoni Moda', 'GFS Didot', 'Libre Bodoni', serif;
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    
+    .subtitulo {
+      font-size: 12px;
+      font-style: italic;
+    }
+    
+    /* MANCHETE */
+    .manchete {
+      border-top: 4px double #2c2416;
+      border-bottom: 4px double #2c2416;
+      padding: 15px 0;
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    .manchete h2 {
+      font-family: 'Bodoni Moda', 'GFS Didot', 'Libre Bodoni', serif;
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+    
+    .manchete p {
+      font-size: 18px;
+      font-style: italic;
+    }
+    
+    /* IMAGEM PRINCIPAL */
+    .imagem-principal {
+      border: 2px solid #2c2416;
+      padding: 10px;
+      max-width: 500px;
+      margin: 20px auto;
+    }
+    
+    .imagem-principal img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%) sepia(30%);
+    }
+    
+    .imagem-principal p {
+      text-align: center;
+      font-size: 14px;
+      font-style: italic;
+      margin-top: 10px;
+    }
+    
+    /* LAYOUT DE COLUNAS */
+    .conteudo {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .artigo-principal {
+      flex: 2;
+      min-width: 300px;
+    }
+    
+    .coluna-lateral {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    /* ARTIGO */
+    .artigo-principal > p {
+      text-align: justify;
+      margin-bottom: 15px;
+      text-indent: 30px;
+    }
+    
+    .artigo-principal > p:first-of-type {
+      text-indent: 0;
+    }
+    
+    .artigo-principal > p:first-of-type::first-letter {
+      float: left;
+      font-size: 72px;
+      font-weight: bold;
+      line-height: 0.8;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    
+    .deus-salve {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 30px;
+      text-indent: 0 !important;
+    }
+    
+    /* IMAGENS NO ARTIGO */
+    .imagem-artigo {
+      border: 2px solid #2c2416;
+      padding: 8px;
+      margin: 20px 0;
+      background-color: #ebe5d5;
+    }
+    
+    .imagem-artigo img {
+      display: block;
+      margin: 0 auto;
+      height: auto;
+      filter: grayscale(100%) sepia(30%);
+    }
+    
+    .imagem-artigo.pequena img {
+      width: 150px;
+    }
+    
+    .imagem-artigo.media img {
+      width: 100%;
+      max-width: 350px;
+    }
+    
+    .imagem-artigo p {
+      text-align: center;
+      font-size: 13px;
+      font-style: italic;
+      margin-top: 8px;
+      text-indent: 0;
+    }
+    
+    /* CAIXAS LATERAIS */
+    .caixa {
+      border: 2px solid #2c2416;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #ebe5d5;
+    }
+    
+    .caixa h3 {
+      font-family: 'Bodoni Moda', 'GFS Didot', 'Libre Bodoni', serif;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      border-bottom: 1px solid #2c2416;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    
+    .caixa img {
+      display: block;
+      width: 120px;
+      height: auto;
+      margin: 0 auto 10px;
+      filter: grayscale(100%) sepia(30%);
+    }
+    
+    .caixa p {
+      font-size: 14px;
+      text-align: justify;
+    }
+    
+    .caixa ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .caixa li {
+      font-size: 14px;
+      padding: 5px 0;
+      border-bottom: 1px dashed #2c2416;
+    }
+    
+    .caixa li:last-child {
+      border-bottom: none;
+    }
+    
+    /* QUESTÕES DO ENEM */
+    .secao-questoes {
+      margin-top: 40px;
+      border-top: 4px double #2c2416;
+      padding-top: 20px;
+    }
+    
+    .secao-questoes h2 {
+      font-family: 'Bodoni Moda', 'GFS Didot', 'Libre Bodoni', serif;
+      text-align: center;
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+    
+    .questao {
+      border: 2px solid #2c2416;
+      padding: 20px;
+      margin-bottom: 25px;
+      background-color: #ebe5d5;
+    }
+    
+    .questao h4 {
+      font-family: 'Bodoni Moda', 'GFS Didot', 'Libre Bodoni', serif;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    
+    .questao .texto-base {
+      font-style: italic;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-left: 3px solid #2c2416;
+      background-color: #ebe5d5;
+    }
+    
+    .questao .enunciado {
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    
+    .alternativas {
+      list-style: none;
+    }
+    
+    .alternativa {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 10px 15px;
+      margin-bottom: 8px;
+      border: 1px solid #2c2416;
+      background-color: #ebe5d5;
+      cursor: pointer;
+      font-family: 'Lora', Georgia, serif;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+    
+    .alternativa:hover:not(.respondida) {
+      background-color: #e8e0d0;
+    }
+    
+    .alternativa.correta {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    
+    .alternativa.errada {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    
+    .alternativa.desabilitada {
+      opacity: 0.5;
+      cursor: default;
+    }
+    
+    .explicacao {
+      margin-top: 15px;
+      padding: 15px;
+      border: 1px solid;
+      display: none;
+    }
+    
+    .explicacao.correta {
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    
+    .explicacao.errada {
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    
+    .explicacao h5 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    /* RODAPÉ */
+    footer {
+      text-align: center;
+      border-top: 2px solid #2c2416;
+      padding-top: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+    
+    footer p {
+      margin-bottom: 5px;
+    }
+    
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+      
+      .manchete h2 {
+        font-size: 24px;
+      }
+      
+      .conteudo {
+        flex-direction: column;
+      }
+      
+      .artigo-principal > p:first-of-type::first-letter {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- CABEÇALHO -->
+    <header>
+      <h1>Correio da Manhã</h1>
+      <p class="subtitulo">Capital Federal, 24 de Novembro de 1910</p>
+    </header>
+    
+    <!-- MANCHETE PRINCIPAL -->
+    <div class="manchete">
+      <h2>ATTENTADO CONTRA A PATRIA E A REPUBLICA!</h2>
+      <p>Amotinados na Bahia de Guanabara ameaçam a Civilisação sob o pretexto da Chibata</p>
+    </div>
+    
+    <!-- IMAGEM PRINCIPAL -->
+    <div class="imagem-principal">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/navio1-rGgJuBeOROl8ftP8BMfSrWl6cOaJkS.png" alt="Navio de guerra brasileiro com marinheiros durante a Revolta da Chibata em 1910">
+      <p>Couraçado São Paulo, um dos navios tomados pelos revoltosos</p>
+    </div>
+    
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="conteudo">
+      
+      <!-- ARTIGO PRINCIPAL -->
+      <article class="artigo-principal">
+        <p>Com profunda indignação e justificado assombro, a Capital da Republica despertou nestes ultimos dias sob a mira dos formidaveis canhões de sua propria esquadra. Os gloriosos couraçados Minas Geraes e São Paulo, orgulhos da nossa engenharia naval e symbolos do progresso e da pujança do nosso regimen republicano, encontram-se sequestrados por uma horda de marinheiros insubordinados, que voltaram as armas da Nação contra o peito de seus proprios concidadãos.</p>
+        
+        <p>Qual o pretexto para tal acção de felonia? A justa e regulamentar punição physica applicada a um marujo facinoroso, de nome Marcelino, que, num acto de extrema selvageria, ferira um companheiro de farda a navalhadas. Em defesa deste criminoso de baixa estyrpe, a marinhagem amotinou-se, assassinando officiaes nobres e tomando de assalto as machinas de guerra que a Republica, com tanto suor do erario publico, adquiriu na Europa para a nossa defesa.</p>
+        
+        <p>Agora, um marinheiro de nome João Cândido ousa intitular-se, num arremedo grotesco, «Almirante», exigindo o fim dos castigos corporaes e amnistia, numa affronta directa á hierarchia, á disciplina e á ordem civilisada.</p>
+
+        <p>É forçoso reconhecer, meus senhores, que estes actos de barbárie são uma herança nefasta dos tempos obscuros do Imperio. A monarchia, que por decadas manteve o Brazil acorrentado ao atraso e á frouxidão moral, legou-nos esta ralé indisciplinada que confunde a liberdade republicana com a anarchia. Os saudosistas do paço imperial decerto regozijam-se nas sombras com esta desordem, sonhando com o retorno das trevas, do despotismo de outrora e da desestabilisação do nosso jovem e vigoroso regimen.</p>
+
+        <p>Querem fazer crer que a Republica falha onde o Imperador triumpharia, uma mentira deslavada e vil! Foi a Republica que trouxe a luz da modernidade a este paiz! Foi a Republica que nos equipou com os «Dreadnoughts», o que ha de mais avançado e terrível nos mares do mundo!</p>
+        
+        <!-- IMAGEM DA CHIBATA -->
+        <div class="imagem-artigo pequena">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/chibata-prAR1tOhFEi7KT0d0nUuan6uv2pOV3.png" alt="Ilustração de castigo com chibata aplicado a marinheiro">
+          <p>Illustração dos castigos corporaes applicados aos marujos</p>
+        </div>
+        
+        <p>Foi a Republica que trouxe a luz da modernidade a este paiz! Foi a Republica que nos equipou com os «Dreadnoughts», o que ha de mais avançado e terrível nos mares do mundo! Todavia, as modernas machinas de aço estão nas mãos de homens de mentalidade retrograda, incapazes de comprehender a nobreza do dever e a elevação moral exigidas pelo novo seculo. O uso da chibata, que os amotinados tanto repudiam, revela-se agora não um capricho, mas um mal necessario para conter os instinctos bestiaes daquelles que não respondem á voz da rasão.</p>
+        
+        <p>Não podemos olvidar que a hydra do retrocesso manifesta-se sob variadas máscaras. O que vemos hoje na Guanabara é o mesmo germen da ignorância que incendiou o sertão de Canudos. Lá, o fanatismo de um messias; aqui, a audacia de um 'almirante' de cor que pretende deitar por terra a disciplina republicana. Tanto no Arraial quanto nos conveses, o que se avista é a sanha daquelles que, por incapacidade atavica, preferem o caos dos motins á ordem augusta das leis. É o sertão barbaro que tenta, mais uma vez, invadir a Capital Federal!</p>
+        
+        <p>O problema que ora enfrentamos não é de brutalidade dos officiaes, como querem fazer crer os sentimentalistas de gabinete. É um problema de formação. Homens toscos, analphabetos, criados na mais crassa ignorancia, não podem aspirar ao tratamento que se dispensa a um cidadão esclarecido. Antes de abolir a chibata, há que abolir a ignorancia; antes de reclamar direitos, há que provar-se digno delles. Que se instrua o marujo, que se lhe dê educação moral e cívica, e então, só então, poderemos discutir a reforma dos costumes navaes.</p>
+        
+        <p>O governo não póde, sob hypothese alguma, curvar-se á chantagem de canhões apontados para o coração do Rio de Janeiro. Confiamos na rectidão e na firmeza de animo do Exm. Sr. Presidente da Republica, Marechal Hermes da Fonseca. Que se faça valer a autoridade do Estado contra os rebeldes, assim como fez o saudoso Floriano, Marechal de Ferro! A Republica é a ordem e o progresso, e não tolerará que a indisciplina monarchica e o motim se instaurem no seio da nossa gloriosa Marinha!</p>
+        
+        <p class="deus-salve">DEUS SALVE A REPUBLICA!</p>
+        
+        <!-- IMAGEM DOS MARINHEIROS -->
+        <div class="imagem-artigo media">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Revolta-da-Chibata-Acervo-Augusto-Malta-B16g46mLmW7bBXezl4usdDWms8LeS3.png" alt="Marinheiros armados durante a Revolta da Chibata">
+          <p>Marinheiros revoltosos armados no convés do navio</p>
+        </div>
+      </article>
+      
+      <!-- COLUNA LATERAL -->
+      <aside class="coluna-lateral">
+        
+        <!-- JOÃO CÂNDIDO -->
+        <div class="caixa">
+          <h3>O Líder dos Revoltosos</h3>
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lider-revolta-chibata-rqojU6UmKBYbpAaztbYXL2eIdb3vJO.webp" alt="João Cândido, o Almirante Negro">
+          <p>João Cândido Felisberto foi um marinheiro brasileiro nascido no Rio Grande do Sul e ficou conhecido por liderar a Revolta da Chibata, em 1910. O movimento aconteceu porque os marinheiros sofriam com baixos salários, más condições de trabalho e castigos físicos, como as chibatadas. João Cândido liderou a revolta exigindo o fim desses castigos e melhores condições na Marinha. Durante o movimento, os revoltosos chegaram a controlar navios de guerra importantes do país. Por sua coragem e liderança, ele ficou conhecido como "Almirante Negro". Mesmo com a promessa do governo de atender às exigências, João Cândido foi perseguido, preso e expulso da Marinha. Hoje, ele é lembrado como símbolo da luta contra a violência e a injustiça.</p>
+        </div>
+        
+        <!-- EXIGÊNCIAS -->
+        <div class="caixa">
+          <h3>Exigências dos Rebeldes</h3>
+          <ul>
+            <li>Fim da chibata na Marinha.</li>
+            <li>Melhores condições de trabalho.</li>
+            <li>Salários mais justos.</li>
+            <li>Menos violência e maus-tratos.</li>
+            <li>Anistia para os revoltosos.</li>
+          </ul>
+        </div>
+        
+        <!-- CRONOLOGIA -->
+        <div class="caixa">
+          <h3>Chronologia dos Factos</h3>
+          <ul>
+            <li><strong>1888:</strong> Continuam os maus-tratos na Marinha após a abolição.</li>
+            <li><strong>1910:</strong> Um marinheiro recebe muitas chibatadas.</li>
+            <li><strong>1910:</strong> Marinheiros tomam navios e iniciam a revolta.</li>
+            <li><strong>1910:</strong> Governo promete acabar com a chibata.</li>
+            <li><strong>1910:</strong> Ocorre repressão e prisões.</li>
+          </ul>
+        </div>
+        
+      </aside>
+    </div>
+    
+    <!-- QUESTÕES DO ENEM -->
+    <section class="secao-questoes">
+      <h2>Questões do ENEM</h2>
+      
+      <!-- QUESTÃO 1 -->
+      <div class="questao" id="questao1">
+        <h4>ENEM Reaplicação/PPL 2010 - Questão 31</h4>
+        <div class="texto-base">
+          <p><strong>O Mestre-Sala dos Mares</strong></p>
+          <p>Há muito tempo nas águas da Guanabara<br>
+          O dragão do mar reapareceu<br>
+          Na figura de um bravo marinheiro<br>
+          A quem a história não esqueceu<br>
+          Conhecido como o almirante negro<br>
+          Tinha a dignidade de um mestre-sala<br>
+          E ao navegar pelo mar com seu bloco de fragatas<br>
+          Foi saudado no porto pelas mocinhas francesas<br>
+          Jovens polacas e por batalhões de mulatas</p>
+          <p><em>BOSCO, J.; BLANC, A. O mestre-sala dos mares. Disponível em: www.frfranciscanos.org.br</em></p>
+        </div>
+        <p class="enunciado">Na história brasileira, a chamada Revolta da Chibata, liderada por João Cândido, e descrita na música, foi:</p>
+        <div class="alternativas">
+          <button class="alternativa" data-questao="1" data-letra="A">A) a rebelião de escravos contra os castigos físicos, ocorrida na Bahia, em 1848, e repetida no Rio de Janeiro.</button>
+          <button class="alternativa" data-questao="1" data-letra="B">B) a revolta, no porto de Salvador, em 1860, de marinheiros dos navios que faziam o tráfico negreiro.</button>
+          <button class="alternativa" data-questao="1" data-letra="C">C) o protesto, ocorrido no Exército, em 1865, contra o castigo de chibatadas em soldados desertores na Guerra do Paraguai.</button>
+          <button class="alternativa" data-questao="1" data-letra="D">D) a rebelião dos marinheiros, negros e mulatos, em 1910, contra os castigos e as condições de trabalho na Marinha de Guerra.</button>
+          <button class="alternativa" data-questao="1" data-letra="E">E) o protesto popular contra o aumento do custo de vida no Rio de Janeiro, em 1917, dissolvido, a chibatadas, pela polícia.</button>
+        </div>
+        <div class="explicacao" id="explicacao1">
+          <h5>Resposta Correta: D</h5>
+          <p>A questão trata da Revolta da Chibata, utilizando a música O mestre-sala dos mares, que faz referência a João Cândido. O texto evidencia os castigos físicos sofridos pelos marinheiros, principalmente negros, mesmo após a abolição. A alternativa D é correta porque descreve exatamente o movimento ocorrido em 1910, caracterizado pela revolta dos marinheiros contra as chibatadas e as más condições de trabalho na Marinha.</p>
+        </div>
+      </div>
+      
+      <!-- QUESTÃO 2 -->
+      <div class="questao" id="questao2">
+        <h4>ENEM 2018 - Questão 71</h4>
+        <div class="texto-base">
+          <p>Os seus líderes terminaram presos e assassinados. A "marujada" rebelde foi inteiramente expulsa da esquadra. Num sentido histórico, porém, eles foram vitoriosos. A "chibata" e outros castigos físicos infamantes nunca mais foram oficialmente utilizados; a partir de então, os marinheiros — agora respeitados — teriam suas condições de vida melhoradas significativamente. Sem dúvida fizeram avançar a História.</p>
+          <p><em>MAESTRI, M. 1910: a revolta dos marinheiros – uma saga negra. São Paulo: Global, 1982.</em></p>
+        </div>
+        <p class="enunciado">A eclosão desse conflito foi o resultado da tensão acumulada na Marinha do Brasil pelo(a):</p>
+        <div class="alternativas">
+          <button class="alternativa" data-questao="2" data-letra="A">A) engajamento de civis analfabetos após a emergência de guerras externas.</button>
+          <button class="alternativa" data-questao="2" data-letra="B">B) insatisfação de militares positivistas após a consolidação da política dos governadores.</button>
+          <button class="alternativa" data-questao="2" data-letra="C">C) rebaixamento de comandantes veteranos após a repressão a insurreições milenaristas.</button>
+          <button class="alternativa" data-questao="2" data-letra="D">D) sublevação das classes populares do campo após a instituição do alistamento obrigatório.</button>
+          <button class="alternativa" data-questao="2" data-letra="E">E) manutenção da mentalidade escravocrata da oficialidade após a queda do regime imperial.</button>
+        </div>
+        <div class="explicacao" id="explicacao2">
+          <h5>Resposta Correta: E</h5>
+          <p>A questão aborda a Revolta da Chibata, destacando que, apesar da repressão aos marinheiros, o movimento gerou mudanças importantes, como o fim oficial das chibatadas. O texto evidencia que a revolta foi resultado de tensões dentro da Marinha, especialmente devido à permanência de práticas autoritárias após o fim da escravidão. Assim, a alternativa E é correta, pois aponta a manutenção da mentalidade escravocrata da oficialidade, que continuava submetendo os marinheiros — em sua maioria negros e pobres — a castigos físicos e condições degradantes, sendo esse o principal motivo da revolta.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- RODAPÉ -->
+    <footer>
+      <p><strong>Trabalho Escolar - Revolta da Chibata - 1910 - História do Brasil</strong></p>
+    </footer>
+    
+  </div>
+  
+  <!-- JAVASCRIPT -->
+  <script>
+    // Respostas corretas
+    var respostasCorretas = {
+      '1': 'D',
+      '2': 'E'
+    };
+    
+    // Questões já respondidas
+    var respondidas = {};
+    
+    // Adicionar evento de clique em todas as alternativas
+    var alternativas = document.querySelectorAll('.alternativa');
+    
+    alternativas.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var questao = this.getAttribute('data-questao');
+        var letra = this.getAttribute('data-letra');
+        
+        // Se já respondeu, não faz nada
+        if (respondidas[questao]) return;
+        
+        // Marcar como respondida
+        respondidas[questao] = true;
+        
+        // Pegar todas as alternativas desta questão
+        var todasAlternativas = document.querySelectorAll('[data-questao="' + questao + '"]');
+        
+        // Verificar se está correta
+        var correta = respostasCorretas[questao];
+        
+        todasAlternativas.forEach(function(alt) {
+          alt.classList.add('respondida');
+          var letraAlt = alt.getAttribute('data-letra');
+          
+          if (letraAlt === correta) {
+            alt.classList.add('correta');
+          } else if (letraAlt === letra) {
+            alt.classList.add('errada');
+          } else {
+            alt.classList.add('desabilitada');
+          }
+        });
+        
+        // Mostrar explicação
+        var explicacao = document.getElementById('explicacao' + questao);
+        explicacao.style.display = 'block';
+        
+        if (letra === correta) {
+          explicacao.classList.add('correta');
+        } else {
+          explicacao.classList.add('errada');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
